@@ -2,9 +2,8 @@ package org.jared.jaredctienda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration; // Temporal, quitar cuando se vaya a usar BASE DE DATOS
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class Main {
 
     public static void main(String[] args) {
