@@ -79,4 +79,10 @@ public class ProductoService {
     public List<Producto> consultaSQL(double precioInf, double precioSup) {
         return productoRepository.consultaSQL(precioInf, precioSup);
     }
+
+    // Consulta presonalizada d la prac 2
+    @Transactional(readOnly = true)
+    public List<Producto> consultaPrac2(int existenciasInf, int existenciasSup){
+        return productoRepository.findByExistenciasBetweenOrderByExistenciasAsc(existenciasInf, existenciasSup);
+    }
 }
